@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>address-or-import</title>
+    <link rel="stylesheet" href="assets/address.css" />
+  </head>
+  <body>
+    <div class="icon-container" onclick="goToIndex()">
+      <img src="images/icon_back.svg" alt="Back to index.html" />
+    </div>
+
+    <div class="dev-message">
+      <p>Type the address to get started</p>
+    </div>
+  </div>
+
+    <div class="search-access">
+      <form>
+        <input
+          type="text"
+          id="search"
+          name="search"
+          placeholder="Search..."
+          required
+        />
+        <button type="button" onclick="goToPromoVideo()">
+          <img
+            src="images/forward_arrow.svg"
+            alt="forward"
+            onclick="goToLoadingScreen()"
+          />
+        </button>
+      </form>
+    </div>
+
+    <div class="box">
+      <h2>Or, import your own model</h2>
+      <input
+        type="file"
+        class="import-btn"
+        accept="image/*"
+        onchange="handleFileImport(event)"
+      />
+    </div>
+
+    <script>
+      //<- this code should be in a sepparate javascript
+      function goToIndex() {
+        window.location.href = "index.html";
+      }
+      function goToLoadingScreen() {
+        window.location.href = "loadingScreen.html";
+      }
+    </script>
+
+    <script>
+      //<- this code should be in a sepparate javascript
+      let uploadedImageSrc;
+
+      function handleFileImport(event) {
+        const file = event.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            uploadedImageSrc = e.target.result;
+            navigateToPlayground();
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+
+      function navigateToLoadingScreen() {
+        if (uploadedImageSrc) {
+          window.location.href = "loadingScreen.html";
+        }
+      }
+    </script>
+  </body>
+</html>

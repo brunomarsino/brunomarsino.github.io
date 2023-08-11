@@ -1,0 +1,66 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Martian Mono", monospace;
+  font-size: 16px; /* Set a root font size */
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+  color: #222222;
+  height: 100vh;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 20px;
+}
+
+.icon-container {
+  position: relative;
+  width: 100px; /* Adjust the size as per your icon */
+  height: 100px; /* Adjust the size as per your icon */
+}
+
+.icon-container img {
+  position: absolute;
+  top: 25%;
+  left: 33%;
+  width: 1.92638rem;
+  height: 1.4375rem;
+  flex-shrink: 0;
+}
+
+a.SkipVideo {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 3;
+  color: #222;
+  text-align: right;
+  font-family: "Martian Mono", monospace;
+  font-size: 1.7rem;
+  text-decoration: none;
+}
+
+a.SkipVideo:hover {
+  font-style: italic;
+  color: #fb1430;
+}
+
+.dev-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 9999; /* Place it above everything else */
+  background: rgba(255, 255, 255, 0.9); /* Optional: Add a semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

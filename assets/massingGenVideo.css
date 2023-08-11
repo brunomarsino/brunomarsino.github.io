@@ -1,0 +1,12 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Disables mouse events on the video */
+  }

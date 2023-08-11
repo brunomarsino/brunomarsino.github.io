@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>areaCalculation</title>
+    <link rel="stylesheet" href="assets/areaCalculationStyle.css" />
+  </head>
+  <body>
+    <!-- "Next" link in the top right corner -->
+    <a href="massingGenVideo.html" class="next-link">Next</a>
+
+    <h1>Edit the working area</h1>
+
+    <!-- Use anchor tag to link back to address.html -->
+    <a href="address.html" class="icon-container">
+      <img src="images/icon_back.svg" alt="Back to address.html" />
+    </a>
+
+    <div class="ykaSiteImage">
+      <img src="images/ykaSite2k.png" />
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <div class="area-calculation" id="areaDisplay"></div>
+
+    <div class="buttons">
+      <div class="icon-container" onclick="goToIndex()">
+        <img
+          src="images/checkButton_white.svg"
+          alt="Back to massingGenVideo.html"
+        />
+      </div>
+    </div>
+
+    <script src="assets/interactiveSquare.js"></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Martian Mono", monospace;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  position: absolute;
+  font-size: 19px;
+  color: #333;
+  text-align: center;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.icon-container {
+  position: absolute;
+  top: 1.37rem;
+  left: 2.12rem;
+  z-index: 1;
+}
+
+.ykaSiteImage {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  z-index: 1;
+  width: 75.1875rem;
+  height: 38.0625rem;
+  margin: 12.5vh 12.5vw;
+  flex: auto;
+  flex-shrink: 0;
+}
+
+canvas {
+  z-index: 2;
+}
+
+.area-calculation {
+  font-family: "Martian Mono", monospace;
+  font-size: 1.75rem;
+  font-style: normal;
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: white; /* White background */
+}
+
+.next-link {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #222222;
+  font-family: "Martian Mono", monospace;
+  z-index: 99999;
+}

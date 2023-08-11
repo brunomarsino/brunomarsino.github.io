@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>playground</title>
+    <meta name="description" content="<model-viewer> template" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" href="assets/3dModelTest.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="tools">
+        <img src="images/sandwich.svg" alt="Icon 1" class="icon" />
+        <img src="images/DarkMode.svg" alt="Icon 2" class="icon" />
+        <img src="images/booleanOperations.svg" alt="Icon 3" class="icon" />
+        <img src="icon4.svg" alt="Icon 4" class="icon" />
+      </div>
+      <div class="import-export">
+        <img src="images/star.svg" alt="Icon 5" class="icon" />
+        <img src="images/trash.svg" alt="Icon 6" class="icon" />
+        <img src="images/exit.svg" alt="Icon 7" class="icon" />
+      </div>
+    </header>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-item" id="model-yka1">
+          <img src="AI-Images/YKA-Site/yka-1.png" alt="Image 1" id="image1" />
+        </div>
+        <div class="carousel-item" id="model-yka2">
+          <img src="AI-Images/YKA-Site/yka-2.png" alt="Image 2" id="image2" />
+        </div>
+        <div class="carousel-item" id="model-yka3">
+          <img src="AI-Images/YKA-Site/yka-3.png" alt="Image 3" id="image3" />
+        </div>
+        <div class="carousel-item" id="model-yka4">
+          <img src="AI-Images/YKA-Site/yka-4.png" alt="Image 4" id="image4" />
+        </div>
+        <div class="carousel-item" id="model-yka5">
+          <img src="AI-Images/YKA-Site/yka-5.png" alt="Image 5" id="image5" />
+        </div>
+        <div class="carousel-item" id="model-yka6">
+          <img src="AI-Images/YKA-Site/yka-6.png" alt="Image 6" id="image6" />
+        </div>
+        <div class="carousel-item" id="model-yka7">
+          <img src="AI-Images/YKA-Site/yka-7.png" alt="Image 7" id="image7" />
+        </div>
+        <div class="carousel-item" id="model-yka8">
+          <img src="AI-Images/YKA-Site/yka-8.png" alt="Image 8" id="image8" />
+        </div>
+        <div class="carousel-item" id="model-yka9">
+          <img src="AI-Images/YKA-Site/yka-9.png" alt="Image 9" id="image9" />
+        </div>
+        <div class="carousel-item" id="model-yka10">
+          <img
+            src="AI-Images/YKA-Site/yka-10.png"
+            alt="Image 10"
+            id="image10"
+          />
+        </div>
+      </div>
+    </div>
+    <model-viewer
+      id="3dModelViewer"
+      src="3dModels/yka0.glb"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      camera-controls
+      poster="poster.webp"
+      shadow-intensity="0"
+      auto-rotate
+      camera-orbit="367.4deg 61.89deg 13320m"
+      field-of-view="22.98deg">
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+    </model-viewer>
+    <script src="assets/3dModelTest.js"></script>
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"
+    ></script>
+    <script>
+      const modelViewer = document.getElementById("3dModelViewer");
+      const image1 = document.getElementById("model-yka1");
+      const image2 = document.getElementById("model-yka2");
+      const image3 = document.getElementById("model-yka3");
+      const image4 = document.getElementById("model-yka4");
+      const image5 = document.getElementById("model-yka5");
+      const image6 = document.getElementById("model-yka6");
+      const image7 = document.getElementById("model-yka7");
+      const image8 = document.getElementById("model-yka8");
+      const image9 = document.getElementById("model-yka9");
+      const image10 = document.getElementById("model-yka10");
+
+      image1.addEventListener("click", function () {
+        modelViewer.setAttribute("src", "3dModels/yka1.glb");
+      });
+
+      image2.addEventListener("click", function () {
+        modelViewer.setAttribute("src", "3dModels/yka2.glb");
+      });
+
+      image3.addEventListener("click", function () {
+        modelViewer.setAttribute("src", "3dModels/yka3.glb");
+      });
+
+      image4.addEventListener("click", function () {
+        modelViewer.setAttribute("src", "3dModels/yka4.glb");
+      });
+
+      image5.addEventListener("click", function () {
+        modelViewer.setAttribute("src", "3dModels/yka5.glb");
+      });
+
+      image6.addEventListener("click", function () {
+        modelViewer.setAttribute("src", "3dModels/yka6.glb");
+      });
+
+      image7.addEventListener("click", function () {
+        modelViewer.setAttribute("src", "3dModels/yka7.glb");
+      });
+
+      image8.addEventListener("click", function () {
+        modelViewer.setAttribute("src", "3dModels/yka8.glb");
+      });
+
+      image9.addEventListener("click", function () {
+        modelViewer.setAttribute("src", "3dModels/yka9.glb");
+      });
+
+      image10.addEventListener("click", function () {
+        modelViewer.setAttribute("src", "3dModels/yka10.glb");
+      });
+    </script>
+    <main>
+      <div class="search-bar">
+        <input
+          type="text"
+          placeholder="Type prompts here..."
+          class="search-input"
+        />
+      </div>
+      <div class="tools2">
+        <img src="images/location.svg" alt="Icon 8" class="icon-small" />
+        <img src="images/slope.svg" alt="Icon 9" class="icon-small" />
+        <img
+          src="images/terrain.svg"
+          alt="Icon 10"
+          class="icon-small"
+          id="terrain-icon"
+        />
+      </div>
+    </main>
+  </body>
+</html>
